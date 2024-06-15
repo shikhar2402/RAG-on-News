@@ -14,7 +14,6 @@ This is a user-friendly news research tool designed for effortless information r
 
 
 ## Installation
-
 1.Clone this repository to your local machine using:
 
 ```bash
@@ -25,25 +24,44 @@ This is a user-friendly news research tool designed for effortless information r
 ```bash
   cd RAG-on-News-Articles
 ```
-3. Install the required dependencies using pip:
+
+Setup using docker:
+
+1. Build a docker image in your local machine
+
+```bash
+ docker build -t rag-on-new-article:latest .          
+```
+
+2. Create a container for running the application
+
+```bash
+  docker run -it -p 8501:8501 rag-on-new-article:latest
+```
+
+3. Naviate to the url localhost:8501
+
+Or You can setup the installation without docker using the following commands:
+
+1. Install the required dependencies using pip:
 
 ```bash
   pip install -r requirements.txt
 ```
-4.Set up your OpenAI API key by creating a .env file in the project root and adding your API
+2.Set up your OpenAI API key by creating a .env file in the project root and adding your API
 
 ```bash
   OPENAI_API_KEY=your_api_key_here
 ```
 ## Usage/Examples
 
-1. Run the Streamlit app by executing:
+3. Run the Streamlit app by executing:
 ```bash
 streamlit run main.py
 
 ```
 
-2.The web app will open in your browser.
+The web app will open in your browser.
 
 - On the sidebar, you can input URLs directly.
 
