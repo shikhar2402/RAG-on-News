@@ -19,7 +19,6 @@ urls = []
 for i in range(3):
     url = st.sidebar.text_input(f"URL {i+1}")
     urls.append(url)
-print("Fsdfs" , urls)
 process_url_clicked = st.sidebar.button("Process URLs")
 file_path = "faiss_store_openai.pkl"
 
@@ -31,7 +30,6 @@ if process_url_clicked:
     loader = UnstructuredURLLoader(urls=urls)
     main_placeholder.text("Data Loading...Started...✅✅✅")
     data = loader.load()
-    print(data)
     # split data
     text_splitter = RecursiveCharacterTextSplitter(
         separators=['\n\n', '\n', '.', ','],
